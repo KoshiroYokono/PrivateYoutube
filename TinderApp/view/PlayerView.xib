@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayerView" customModule="TinderApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nm-KB-fSA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9nm-KB-fSA" secondAttribute="height" multiplier="16:9" priority="300" id="ij4-hy-KOV"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pNN-Oz-Fra">
+                    <rect key="frame" x="0.0" y="233" width="414" height="663"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-7i-EYY">
+                    <rect key="frame" x="0.0" y="831" width="414" height="65"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7m-08-lPk">
+                            <rect key="frame" x="349" y="0.0" width="65" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="u7m-08-lPk" secondAttribute="height" id="waD-Ry-GPh"/>
+                            </constraints>
+                            <state key="normal" title="閉じる"/>
+                            <connections>
+                                <action selector="closePlayerViewButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hcT-1m-jJ9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-XL-PVl">
+                            <rect key="frame" x="284" y="0.0" width="65" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TLz-XL-PVl" secondAttribute="height" multiplier="1:1" id="tgn-Ky-x2X"/>
+                            </constraints>
+                            <state key="normal" title="再生"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="u7m-08-lPk" firstAttribute="leading" secondItem="TLz-XL-PVl" secondAttribute="trailing" id="4v2-8c-tBi"/>
+                        <constraint firstAttribute="trailing" secondItem="u7m-08-lPk" secondAttribute="trailing" id="7nG-tq-KFb"/>
+                        <constraint firstItem="TLz-XL-PVl" firstAttribute="top" secondItem="Ad2-7i-EYY" secondAttribute="top" id="ECr-Bl-MzJ"/>
+                        <constraint firstAttribute="bottom" secondItem="u7m-08-lPk" secondAttribute="bottom" id="JdP-1I-W2m"/>
+                        <constraint firstItem="u7m-08-lPk" firstAttribute="top" secondItem="Ad2-7i-EYY" secondAttribute="top" id="MKT-tm-FFk"/>
+                        <constraint firstAttribute="height" priority="700" constant="65" id="rDZ-15-Iqg"/>
+                        <constraint firstAttribute="bottom" secondItem="TLz-XL-PVl" secondAttribute="bottom" id="xYF-Dd-qH4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="pNN-Oz-Fra" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="18a-nI-aBt"/>
+                <constraint firstItem="pNN-Oz-Fra" firstAttribute="top" secondItem="9nm-KB-fSA" secondAttribute="bottom" id="5Wk-gd-fTQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ad2-7i-EYY" secondAttribute="trailing" id="5fK-Io-28m"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pNN-Oz-Fra" secondAttribute="trailing" id="GfG-yt-9GI"/>
+                <constraint firstItem="Ad2-7i-EYY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tgc-Rx-Dee"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9nm-KB-fSA" secondAttribute="trailing" id="drw-vz-wJH"/>
+                <constraint firstAttribute="bottom" secondItem="Ad2-7i-EYY" secondAttribute="bottom" id="eF6-Td-iyd"/>
+                <constraint firstAttribute="bottom" secondItem="pNN-Oz-Fra" secondAttribute="bottom" id="iVX-9Y-hCk"/>
+                <constraint firstItem="9nm-KB-fSA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iXG-97-Y5G"/>
+                <constraint firstItem="9nm-KB-fSA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="imX-RI-S9Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="panGesture" destination="rle-Nh-1L3" id="wlO-uv-OE8"/>
+                <outlet property="tableView" destination="pNN-Oz-Fra" id="SCn-2L-HvR"/>
+                <outlet property="underView" destination="Ad2-7i-EYY" id="jOx-hR-Jci"/>
+                <outlet property="videoView" destination="9nm-KB-fSA" id="s6y-mn-jZW"/>
+                <outletCollection property="gestureRecognizers" destination="rle-Nh-1L3" appends="YES" id="Zx6-Mr-88a"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="rle-Nh-1L3">
+            <connections>
+                <action selector="pangestureDidMoved:" destination="iN0-l3-epB" id="YCU-CI-eo7"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>

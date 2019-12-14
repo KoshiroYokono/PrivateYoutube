@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationFooterView" customModule="TinderApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-J2-7gG">
+                    <rect key="frame" x="0.0" y="1" width="414" height="59"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-vg-oGy">
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="59"/>
+                            <state key="normal" title="ホーム" image="ホームのフリーアイコン素材">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-K6-Juv">
+                            <rect key="frame" x="138" y="0.0" width="138" height="59"/>
+                            <state key="normal" title="履歴" image="本棚のアイコン 2"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-0K-sF9">
+                            <rect key="frame" x="276" y="0.0" width="138" height="59"/>
+                            <state key="normal" title="チャンネルズ" image="本棚のアイコン 2"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="K4I-0K-sF9" firstAttribute="top" secondItem="ozU-J2-7gG" secondAttribute="top" id="0G5-5a-pIq"/>
+                        <constraint firstItem="o7u-K6-Juv" firstAttribute="top" secondItem="ozU-J2-7gG" secondAttribute="top" id="DQ8-uu-VWP"/>
+                        <constraint firstItem="o7u-K6-Juv" firstAttribute="height" secondItem="YG0-vg-oGy" secondAttribute="height" id="EVu-3n-QQV"/>
+                        <constraint firstItem="K4I-0K-sF9" firstAttribute="leading" secondItem="o7u-K6-Juv" secondAttribute="trailing" id="Mbx-ec-qa0"/>
+                        <constraint firstItem="o7u-K6-Juv" firstAttribute="leading" secondItem="YG0-vg-oGy" secondAttribute="trailing" id="R13-9M-to8"/>
+                        <constraint firstItem="YG0-vg-oGy" firstAttribute="top" secondItem="ozU-J2-7gG" secondAttribute="top" id="Tg9-yM-clA"/>
+                        <constraint firstAttribute="bottom" secondItem="K4I-0K-sF9" secondAttribute="bottom" id="U8g-0Y-Dgn"/>
+                        <constraint firstAttribute="bottom" secondItem="YG0-vg-oGy" secondAttribute="bottom" id="VMJ-t7-CVW"/>
+                        <constraint firstAttribute="trailing" secondItem="K4I-0K-sF9" secondAttribute="trailing" id="XqV-cW-U9M"/>
+                        <constraint firstAttribute="bottom" secondItem="o7u-K6-Juv" secondAttribute="bottom" id="XtJ-Cx-wlt"/>
+                        <constraint firstItem="YG0-vg-oGy" firstAttribute="leading" secondItem="ozU-J2-7gG" secondAttribute="leading" id="eBj-om-fuW"/>
+                        <constraint firstItem="o7u-K6-Juv" firstAttribute="width" secondItem="YG0-vg-oGy" secondAttribute="width" id="h6V-9Q-d1F"/>
+                        <constraint firstItem="o7u-K6-Juv" firstAttribute="leading" secondItem="YG0-vg-oGy" secondAttribute="trailing" id="kgh-h4-I67"/>
+                        <constraint firstItem="K4I-0K-sF9" firstAttribute="width" secondItem="YG0-vg-oGy" secondAttribute="width" id="obt-Z7-mkS"/>
+                        <constraint firstItem="K4I-0K-sF9" firstAttribute="height" secondItem="YG0-vg-oGy" secondAttribute="height" id="yTD-oU-N08"/>
+                        <constraint firstItem="K4I-0K-sF9" firstAttribute="leading" secondItem="o7u-K6-Juv" secondAttribute="trailing" id="zAG-yE-gKa"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYy-Yo-FP3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HBe-Zs-Q7N"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ozU-J2-7gG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HF1-mB-Q32"/>
+                <constraint firstItem="FYy-Yo-FP3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TDd-ET-Xn4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ozU-J2-7gG" secondAttribute="trailing" id="dYM-wr-O8k"/>
+                <constraint firstItem="FYy-Yo-FP3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kev-sD-Ooi"/>
+                <constraint firstItem="ozU-J2-7gG" firstAttribute="top" secondItem="FYy-Yo-FP3" secondAttribute="bottom" id="v6Q-fR-NQn"/>
+                <constraint firstAttribute="trailing" secondItem="FYy-Yo-FP3" secondAttribute="trailing" id="wZf-01-ErS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ozU-J2-7gG" secondAttribute="bottom" id="y70-mh-5AO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="channelButton" destination="K4I-0K-sF9" id="SIG-Vm-dii"/>
+                <outlet property="historyButton" destination="o7u-K6-Juv" id="66f-c3-BbW"/>
+                <outlet property="homeButton" destination="YG0-vg-oGy" id="X1T-zf-x3X"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="72.321428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ホームのフリーアイコン素材" width="256" height="256"/>
+        <image name="本棚のアイコン 2" width="256" height="256"/>
+    </resources>
+</document>

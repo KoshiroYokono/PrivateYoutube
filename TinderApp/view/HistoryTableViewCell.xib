@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryTableViewCell" rowHeight="135" id="KGk-i7-Jjw" customClass="HistoryTableViewCell" customModule="TinderApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="537" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="537" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YHM-dc-tU9">
+                        <rect key="frame" x="20" y="10" width="207" height="115"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YHM-dc-tU9" secondAttribute="height" multiplier="9:5" id="XrO-fa-FH7"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ipc-Ed-gMo">
+                        <rect key="frame" x="247" y="10" width="270" height="61.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亀井ホームラン集" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhN-OZ-dIl">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="baseballGod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3t-hs-rbR">
+                                <rect key="frame" x="0.0" y="24.5" width="270" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55万回・10ヶ月前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2v-Pq-MCt">
+                                <rect key="frame" x="0.0" y="45.5" width="270" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="YHM-dc-tU9" secondAttribute="bottom" constant="10" id="6Ok-g4-0Dc"/>
+                    <constraint firstItem="ipc-Ed-gMo" firstAttribute="top" secondItem="YHM-dc-tU9" secondAttribute="top" id="8Of-wr-ayI"/>
+                    <constraint firstAttribute="trailing" secondItem="ipc-Ed-gMo" secondAttribute="trailing" constant="20" id="DLr-iO-IjQ"/>
+                    <constraint firstItem="YHM-dc-tU9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="GVY-RR-OBB"/>
+                    <constraint firstItem="ipc-Ed-gMo" firstAttribute="leading" secondItem="YHM-dc-tU9" secondAttribute="trailing" constant="20" id="flR-mV-Swc"/>
+                    <constraint firstItem="YHM-dc-tU9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="osz-bk-PLm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="sumNaleImage" destination="YHM-dc-tU9" id="FaX-Uo-brE"/>
+                <outlet property="titleLabel" destination="XhN-OZ-dIl" id="OTG-RA-LJt"/>
+                <outlet property="uploaderNameLabel" destination="H3t-hs-rbR" id="l7p-DC-sSl"/>
+                <outlet property="viewCountAndUploadDateLabel" destination="i2v-Pq-MCt" id="hgf-xO-z5M"/>
+            </connections>
+            <point key="canvasLocation" x="294.92753623188406" y="134.26339285714286"/>
+        </tableViewCell>
+    </objects>
+</document>
