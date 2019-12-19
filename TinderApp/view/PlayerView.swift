@@ -38,15 +38,17 @@ class PlayerView: UIView {
     @IBOutlet weak var panGesture: UIPanGestureRecognizer!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var underView: UIView!
+    var youtubeView: YTPlayerView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        NotificationCenter.default.addObserver(self, selector: #selector(tapPlayView), name: NSNotification.Name("open"), object: nil)
+        setUpTableView()
+        setUpYoutubeView()
     }
     
     static func view() -> PlayerView {
         let view = UINib(nibName: String(describing: PlayerView.self), bundle: .main).instantiate(withOwner: self, options: nil).first as! PlayerView
-        NotificationCenter.default.addObserver(view, selector: #selector(tapPlayView), name: NSNotification.Name("open"), object: nil)
-        view.setUpTableView()
         return view
     }
     
@@ -58,6 +60,12 @@ class PlayerView: UIView {
         tableView.register(UINib(nibName: String(describing: HeaderCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HeaderCell.self))
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func setUpYoutubeView() {
+        youtubeView = YTPlayerView(frame: videoView.frame)
+        youtubeView.delegate = self
+        videoView.addSubview(youtubeView)
     }
     
     @IBAction func pangestureDidMoved(_ gesture: UIPanGestureRecognizer) {
@@ -114,6 +122,10 @@ class PlayerView: UIView {
         }
     }
     @objc func tapPlayView() {
+        if let videoId = video?.videoId {
+            youtubeView.load(withVideoId: videoId, playerVars: ["playsinline": 1])
+            youtubeView.playVideo()
+        }
         self.delegate?.didAppear()
     }
     @IBAction func closePlayerViewButtonDidTapped(_ sender: Any) {
@@ -146,4 +158,8 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension PlayerView: YTPlayerViewDelegate {
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) { playerView.playVideo() }
 }

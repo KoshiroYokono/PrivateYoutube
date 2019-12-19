@@ -146,6 +146,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let nav = navigationController as! NavigationViewController
+        nav.playerView.video = videos[indexPath.row]
         NotificationCenter.default.post(name: NSNotification.Name("open"), object: nil)
     }
     
