@@ -13,8 +13,7 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
     @IBOutlet weak var channelButton: UIButton!
-    @IBOutlet weak var footerStackView: UIStackView!
-    
+    @IBOutlet weak var footerView: UIView!
     lazy var viewControllers:[UIViewController] = [
         UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateInitialViewController()!,
         UIStoryboard.init(name: "History", bundle: Bundle.main).instantiateInitialViewController()!,
@@ -57,6 +56,12 @@ class MainTabViewController: UIViewController {
     let videoHeightOrigin:CGFloat = UIScreen.main.bounds.width * (9 / 16)
     let footerHeightOrigin: CGFloat = 50
     
+    var isStatusBarHidden: Bool = false {
+        didSet {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentTabPage = 0
@@ -70,12 +75,12 @@ class MainTabViewController: UIViewController {
     }
     
     func setUpFooter() {
-        footerStackView.translatesAutoresizingMaskIntoConstraints = false
-        footerViewTop = footerStackView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -footerHeightOrigin)
+        footerView.translatesAutoresizingMaskIntoConstraints = false
+        footerViewTop = footerView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -footerHeightOrigin)
         footerViewTop.isActive = true
-        footerStackView.heightAnchor.constraint(equalToConstant: footerHeightOrigin).isActive = true
-        footerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        footerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        footerView.heightAnchor.constraint(equalToConstant: footerHeightOrigin).isActive = true
+        footerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        footerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
     
     func setUpPlayerView() {
@@ -90,7 +95,7 @@ class MainTabViewController: UIViewController {
         let topAnchor = view.topAnchor.constraint(greaterThanOrEqualTo: playerView.topAnchor, constant: 0)
         playerViewWidth = playerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20)
         playerViewHeight = playerView.heightAnchor.constraint(equalToConstant: 0)
-        playerViewBottomToFooter = playerView.bottomAnchor.constraint(equalTo: footerStackView.topAnchor, constant: -10)
+        playerViewBottomToFooter = playerView.bottomAnchor.constraint(equalTo: footerView.topAnchor, constant: -10)
         playerViewBottomToView = view.bottomAnchor.constraint(equalTo: playerView.underView.topAnchor)
         trailing.isActive = true
         leading.isActive = true
@@ -121,6 +126,7 @@ class MainTabViewController: UIViewController {
     func animatePlayView(toState: ViewState) {
             switch toState {
             case .up:
+                isStatusBarHidden = true
                 playerViewHeight.constant = self.view.bounds.height
                 playerViewWidth.constant = self.view.bounds.width
                 videoViewHeight.constant = videoHeightOrigin
@@ -135,6 +141,7 @@ class MainTabViewController: UIViewController {
                 })
 
             case .down:
+                isStatusBarHidden = false
                 playerViewHeight.constant = minimizedOrigin
                 playerViewWidth.constant = self.view.bounds.width - 20
                 videoViewHeight.constant = 65
@@ -148,6 +155,7 @@ class MainTabViewController: UIViewController {
                     self.view.layoutIfNeeded()
                 })
             case .hidden:
+                isStatusBarHidden = false
     //            playerViewHeight.constant = 0
     //            videoViewHeight.constant = 0
                 playerViewBottomToView.isActive = true
@@ -164,6 +172,14 @@ class MainTabViewController: UIViewController {
         button.contentHorizontalAlignment = .fill
         button.contentVerticalAlignment = .fill
         button.imageEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 15, right: 10)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
     }
 }
 
@@ -204,7 +220,6 @@ extension MainTabViewController: PlayerViewDelegate {
         playerViewBottomToView.isActive = false
         animatePlayView(toState: .up)
         playerViewBottomToFooter.isActive = true
-//        要チェック
-        view.bringSubviewToFront(playerView)
+        view.bringSubviewToFront(footerView)
     }
 }

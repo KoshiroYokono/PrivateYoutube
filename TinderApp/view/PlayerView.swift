@@ -129,6 +129,7 @@ class PlayerView: UIView {
         self.delegate?.didAppear()
     }
     @IBAction func closePlayerViewButtonDidTapped(_ sender: Any) {
+        youtubeView.stopVideo()
         delegate?.closePlayerButton()
     }
 }

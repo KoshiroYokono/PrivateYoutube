@@ -102,54 +102,66 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGX-fU-BDW">
-                                <rect key="frame" x="0.0" y="676" width="414" height="1"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-Ji-ubM">
+                                <rect key="frame" x="0.0" y="676" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2A-oD-Npu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="U4G-or-FMA"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jA-jJ-gbj">
+                                        <rect key="frame" x="0.0" y="1" width="414" height="59"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWM-c3-BYH">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="59"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button" image="ホームのフリーアイコン素材"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-ac-smM">
+                                                <rect key="frame" x="138" y="0.0" width="138" height="59"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button" image="本棚のアイコン 2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHh-DD-P5Z">
+                                                <rect key="frame" x="276" y="0.0" width="138" height="59"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button" image="本棚のアイコン 2"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Gtg-ac-smM" firstAttribute="width" secondItem="KWM-c3-BYH" secondAttribute="width" id="8Ji-JO-x6O"/>
+                                            <constraint firstItem="Gtg-ac-smM" firstAttribute="height" secondItem="KWM-c3-BYH" secondAttribute="height" id="8n8-Z0-nd5"/>
+                                            <constraint firstItem="IHh-DD-P5Z" firstAttribute="width" secondItem="KWM-c3-BYH" secondAttribute="width" id="l7p-48-43G"/>
+                                            <constraint firstItem="IHh-DD-P5Z" firstAttribute="height" secondItem="KWM-c3-BYH" secondAttribute="height" id="lcd-G9-sjW"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="K8K-PG-S6S"/>
+                                    <constraint firstAttribute="height" constant="60" id="4Ps-bj-3Le"/>
+                                    <constraint firstAttribute="trailing" secondItem="A2A-oD-Npu" secondAttribute="trailing" id="Ozc-th-Lu9"/>
+                                    <constraint firstAttribute="bottom" secondItem="4jA-jJ-gbj" secondAttribute="bottom" id="Rp6-gF-2pM"/>
+                                    <constraint firstItem="A2A-oD-Npu" firstAttribute="leading" secondItem="P9d-Ji-ubM" secondAttribute="leading" id="Wkz-EK-fcW"/>
+                                    <constraint firstItem="4jA-jJ-gbj" firstAttribute="leading" secondItem="P9d-Ji-ubM" secondAttribute="leading" id="aLY-Ph-wdO"/>
+                                    <constraint firstItem="4jA-jJ-gbj" firstAttribute="top" secondItem="A2A-oD-Npu" secondAttribute="bottom" id="eLs-kx-7Fo"/>
+                                    <constraint firstAttribute="trailing" secondItem="4jA-jJ-gbj" secondAttribute="trailing" id="i3F-4j-XAh"/>
+                                    <constraint firstItem="A2A-oD-Npu" firstAttribute="top" secondItem="P9d-Ji-ubM" secondAttribute="top" id="wWJ-ma-Txr"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jA-jJ-gbj">
-                                <rect key="frame" x="0.0" y="677" width="414" height="59"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWM-c3-BYH">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="59"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button" image="ホームのフリーアイコン素材"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-ac-smM">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="59"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button" image="本棚のアイコン 2"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHh-DD-P5Z">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="59"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button" image="本棚のアイコン 2"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="IHh-DD-P5Z" firstAttribute="width" secondItem="KWM-c3-BYH" secondAttribute="width" id="atL-wy-VUG"/>
-                                    <constraint firstAttribute="height" constant="59" id="eZq-uW-Kzb"/>
-                                    <constraint firstItem="Gtg-ac-smM" firstAttribute="height" secondItem="KWM-c3-BYH" secondAttribute="height" id="ghy-ww-h3D"/>
-                                    <constraint firstItem="IHh-DD-P5Z" firstAttribute="height" secondItem="KWM-c3-BYH" secondAttribute="height" id="rAp-PA-MbU"/>
-                                    <constraint firstItem="Gtg-ac-smM" firstAttribute="width" secondItem="KWM-c3-BYH" secondAttribute="width" id="wTW-nP-keC"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="0VG-x1-5UZ"/>
+                            <constraint firstItem="P9d-Ji-ubM" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="1pT-cC-dzn"/>
                             <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="ggH-8d-95d" secondAttribute="trailing" id="85g-bb-9oh"/>
-                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="bottom" secondItem="VJA-MO-xXm" secondAttribute="bottom" priority="100" id="86T-yw-v3J"/>
-                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="top" secondItem="VGX-fU-BDW" secondAttribute="bottom" id="8tm-8j-VBd"/>
                             <constraint firstItem="VJA-MO-xXm" firstAttribute="bottom" secondItem="ggH-8d-95d" secondAttribute="bottom" id="Agq-za-yjN"/>
-                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="trailing" secondItem="VJA-MO-xXm" secondAttribute="trailing" id="M7N-L1-50u"/>
+                            <constraint firstItem="VJA-MO-xXm" firstAttribute="bottom" secondItem="P9d-Ji-ubM" secondAttribute="bottom" priority="100" id="Fz8-Me-PtM"/>
                             <constraint firstItem="ggH-8d-95d" firstAttribute="top" secondItem="VJA-MO-xXm" secondAttribute="top" id="ReH-xo-FS8"/>
                             <constraint firstItem="ggH-8d-95d" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="TI8-Ig-Xgs"/>
-                            <constraint firstItem="VGX-fU-BDW" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="o9l-jW-EqO"/>
-                            <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="VGX-fU-BDW" secondAttribute="trailing" id="tGD-n4-Uy3"/>
+                            <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="P9d-Ji-ubM" secondAttribute="trailing" id="qY5-dc-Ne3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VJA-MO-xXm"/>
                     </view>
@@ -157,7 +169,7 @@
                     <connections>
                         <outlet property="channelButton" destination="IHh-DD-P5Z" id="19h-zw-Kn8"/>
                         <outlet property="containerView" destination="ggH-8d-95d" id="pfh-Yt-J1h"/>
-                        <outlet property="footerStackView" destination="4jA-jJ-gbj" id="UWw-aW-CBf"/>
+                        <outlet property="footerView" destination="P9d-Ji-ubM" id="tM9-ud-Hhf"/>
                         <outlet property="historyButton" destination="Gtg-ac-smM" id="FUR-mv-ZB8"/>
                         <outlet property="homeButton" destination="KWM-c3-BYH" id="5KZ-nE-5ge"/>
                     </connections>
