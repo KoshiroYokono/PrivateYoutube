@@ -129,11 +129,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         if scrollDiff > boundaryValue {
             navigationController?.setNavigationBarHidden(false, animated: true)
             navigationBarIsHidden = false
-            let playerView = (navigationController as! NavigationViewController).playerView
-            if let playerView = playerView {
-                navigationController?.view.bringSubviewToFront(playerView)
-
-            }
+            let mainTabVC = parent as! MainTabViewController
+            mainTabVC.view.bringSubviewToFront(mainTabVC.playerView)
             return
         }
         if scrollDiff < -boundaryValue {
@@ -146,8 +143,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let nav = navigationController as! NavigationViewController
-        nav.playerView.video = videos[indexPath.row]
+//        tabViewControllerを呼び出せるように変更が必要
+        let mainTabVC = parent as! MainTabViewController
+        mainTabVC.playerView.video = videos[indexPath.row]
         NotificationCenter.default.post(name: NSNotification.Name("open"), object: nil)
     }
     

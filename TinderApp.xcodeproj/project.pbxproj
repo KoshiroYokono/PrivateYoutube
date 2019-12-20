@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		215C0CBB23ACA1B200559066 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215C0CBA23ACA1B200559066 /* MainTabViewController.swift */; };
+		215C0CBE23ACA68E00559066 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215C0CBD23ACA68E00559066 /* Home.storyboard */; };
+		215C0CC023ACA73500559066 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215C0CBF23ACA73500559066 /* History.storyboard */; };
+		215C0CC223ACA76D00559066 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215C0CC123ACA76D00559066 /* Channel.storyboard */; };
 		218402002375008300DF3B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218401FF2375008300DF3B5F /* AppDelegate.swift */; };
 		218402022375008300DF3B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218402012375008300DF3B5F /* ViewController.swift */; };
 		218402052375008400DF3B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218402032375008400DF3B5F /* Main.storyboard */; };
@@ -34,8 +38,6 @@
 		21E0E825238782DD00FD6B41 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E0E824238782DD00FD6B41 /* LoadingView.swift */; };
 		21E0E8272387875400FD6B41 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E0E8262387875400FD6B41 /* VideoList.swift */; };
 		21E0E8292387A80C00FD6B41 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E0E8282387A80C00FD6B41 /* Date+extension.swift */; };
-		21E0E82C2387BC0600FD6B41 /* NavigationFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E0E82B2387BC0600FD6B41 /* NavigationFooterView.swift */; };
-		21E0E82E2387BC3B00FD6B41 /* NavigationFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E0E82D2387BC3B00FD6B41 /* NavigationFooterView.xib */; };
 		21FAB353237F0B3800C4F84B /* ApiDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB352237F0B3800C4F84B /* ApiDefinition.swift */; };
 		21FAB355237F133900C4F84B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB354237F133900C4F84B /* ApiClient.swift */; };
 		21FAB358237FA67E00C4F84B /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB357237FA67E00C4F84B /* String+extension.swift */; };
@@ -63,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		215C0CBA23ACA1B200559066 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		215C0CBD23ACA68E00559066 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		215C0CBF23ACA73500559066 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		215C0CC123ACA76D00559066 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		218401FC2375008300DF3B5F /* TinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218401FF2375008300DF3B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218402012375008300DF3B5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +102,6 @@
 		21E0E824238782DD00FD6B41 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		21E0E8262387875400FD6B41 /* VideoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
 		21E0E8282387A80C00FD6B41 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
-		21E0E82B2387BC0600FD6B41 /* NavigationFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFooterView.swift; sourceTree = "<group>"; };
-		21E0E82D2387BC3B00FD6B41 /* NavigationFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationFooterView.xib; sourceTree = "<group>"; };
 		21FAB352237F0B3800C4F84B /* ApiDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDefinition.swift; sourceTree = "<group>"; };
 		21FAB354237F133900C4F84B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		21FAB357237FA67E00C4F84B /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -141,6 +145,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215C0CBC23ACA66800559066 /* storyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				218402032375008400DF3B5F /* Main.storyboard */,
+				215C0CBD23ACA68E00559066 /* Home.storyboard */,
+				215C0CBF23ACA73500559066 /* History.storyboard */,
+				215C0CC123ACA76D00559066 /* Channel.storyboard */,
+			);
+			path = storyBoard;
+			sourceTree = "<group>";
+		};
 		218401F32375008300DF3B5F = {
 			isa = PBXGroup;
 			children = (
@@ -166,12 +181,12 @@
 		218401FE2375008300DF3B5F /* TinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				215C0CBC23ACA66800559066 /* storyBoard */,
 				21E0E82A2387BB5800FD6B41 /* viewController */,
 				21FAB356237FA65900C4F84B /* extension */,
 				21840233237540C700DF3B5F /* model */,
 				2184022E23753B1F00DF3B5F /* view */,
 				218401FF2375008300DF3B5F /* AppDelegate.swift */,
-				218402032375008400DF3B5F /* Main.storyboard */,
 				218402062375008600DF3B5F /* Assets.xcassets */,
 				218402082375008600DF3B5F /* LaunchScreen.storyboard */,
 				2184020B2375008600DF3B5F /* Info.plist */,
@@ -209,8 +224,6 @@
 				21E0E8152384042300FD6B41 /* HeaderCell.xib */,
 				21E0E824238782DD00FD6B41 /* LoadingView.swift */,
 				21E0E82223877D2900FD6B41 /* LoadingView.xib */,
-				21E0E82B2387BC0600FD6B41 /* NavigationFooterView.swift */,
-				21E0E82D2387BC3B00FD6B41 /* NavigationFooterView.xib */,
 				21D10EEF238D58CC00E8CE4D /* MainTableViewCell.swift */,
 				21D10EF0238D58CC00E8CE4D /* MainTableViewCell.xib */,
 				21D10EF3238D5F8800E8CE4D /* WaitingAnimationTableViewCell.swift */,
@@ -236,6 +249,7 @@
 				21C9F2F823817F2C00B1CA7D /* NavigationViewController.swift */,
 				218402012375008300DF3B5F /* ViewController.swift */,
 				21D10EF72390ABE600E8CE4D /* HistoryViewController.swift */,
+				215C0CBA23ACA1B200559066 /* MainTabViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -401,15 +415,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D10EF6238D5F8800E8CE4D /* WaitingAnimationTableViewCell.xib in Resources */,
+				215C0CBE23ACA68E00559066 /* Home.storyboard in Resources */,
 				21D10EF2238D58CC00E8CE4D /* MainTableViewCell.xib in Resources */,
 				2184020A2375008600DF3B5F /* LaunchScreen.storyboard in Resources */,
 				21E0E82323877D2900FD6B41 /* LoadingView.xib in Resources */,
 				21E0E8172384042300FD6B41 /* HeaderCell.xib in Resources */,
-				21E0E82E2387BC3B00FD6B41 /* NavigationFooterView.xib in Resources */,
+				215C0CC223ACA76D00559066 /* Channel.storyboard in Resources */,
 				2184023223753B5700DF3B5F /* HistoryTableViewCell.xib in Resources */,
 				218402072375008600DF3B5F /* Assets.xcassets in Resources */,
 				218402052375008400DF3B5F /* Main.storyboard in Resources */,
 				21C9F2FD23818E6E00B1CA7D /* PlayerView.xib in Resources */,
+				215C0CC023ACA73500559066 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +560,6 @@
 				21D10EF5238D5F8800E8CE4D /* WaitingAnimationTableViewCell.swift in Sources */,
 				21E0E81B23844BEE00FD6B41 /* ModelDefinition.swift in Sources */,
 				21FAB355237F133900C4F84B /* ApiClient.swift in Sources */,
-				21E0E82C2387BC0600FD6B41 /* NavigationFooterView.swift in Sources */,
 				21C9F2FB2381823B00B1CA7D /* PlayerView.swift in Sources */,
 				21E0E825238782DD00FD6B41 /* LoadingView.swift in Sources */,
 				21E0E8162384042300FD6B41 /* HeaderCell.swift in Sources */,
@@ -554,6 +569,7 @@
 				2184023123753B5700DF3B5F /* HistoryTableViewCell.swift in Sources */,
 				21E0E8272387875400FD6B41 /* VideoList.swift in Sources */,
 				21FAB353237F0B3800C4F84B /* ApiDefinition.swift in Sources */,
+				215C0CBB23ACA1B200559066 /* MainTabViewController.swift in Sources */,
 				218402022375008300DF3B5F /* ViewController.swift in Sources */,
 				21E0E8192384193000FD6B41 /* UIImage+extension.swift in Sources */,
 				218402002375008300DF3B5F /* AppDelegate.swift in Sources */,

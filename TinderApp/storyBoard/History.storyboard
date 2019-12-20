@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Huc-fp-Qez">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="WIB-fg-dgM">
+            <objects>
+                <viewController storyboardIdentifier="PlayerViewController" id="Huc-fp-Qez" customClass="HistoryViewController" customModule="TinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" id="NnD-Hj-OaL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jtf-y8-9pM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Jtf-y8-9pM" firstAttribute="top" secondItem="reN-y1-zd3" secondAttribute="top" id="Abd-nn-YLm"/>
+                            <constraint firstItem="reN-y1-zd3" firstAttribute="trailing" secondItem="Jtf-y8-9pM" secondAttribute="trailing" id="F7e-yC-opA"/>
+                            <constraint firstItem="reN-y1-zd3" firstAttribute="bottom" secondItem="Jtf-y8-9pM" secondAttribute="bottom" id="Tis-pA-1Cm"/>
+                            <constraint firstItem="Jtf-y8-9pM" firstAttribute="leading" secondItem="reN-y1-zd3" secondAttribute="leading" id="gSw-CP-a7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="reN-y1-zd3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzw-bQ-qLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="-171"/>
+        </scene>
+    </scenes>
+</document>

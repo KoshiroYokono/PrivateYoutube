@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V5D-ph-x4u">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lue-gT-n2J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="I4c-R4-gwF" customClass="HistoryTableViewCell" customModule="TinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4c-R4-gwF" id="oiO-Zo-W1r">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lue-gT-n2J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AYh-LR-eOm"/>
+                            <constraint firstItem="Lue-gT-n2J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K3m-J3-JTe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lue-gT-n2J" secondAttribute="trailing" id="KJb-oX-Txg"/>
+                            <constraint firstAttribute="bottom" secondItem="Lue-gT-n2J" secondAttribute="bottom" id="gbN-cC-Uvz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xlQ-wS-CFc"/>
+                    <connections>
+                        <outlet property="movieListTableView" destination="Lue-gT-n2J" id="r37-lT-Nwe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052.1739130434785" y="-174.45652173913044"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Sw-7t-3FF">
+            <objects>
+                <viewController id="F87-er-J8S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dov-Nv-aXy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="T0Q-Nj-6Y0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTu-r6-3Yo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3739.130434782609" y="-174.45652173913044"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="q8p-yT-nmS">
+            <objects>
+                <viewController storyboardIdentifier="PlayerViewController" id="tQ5-Ih-cOz" customClass="HistoryViewController" customModule="TinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" id="udo-t9-5mu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PBU-iw-XCy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YyP-yi-jWW" firstAttribute="trailing" secondItem="PBU-iw-XCy" secondAttribute="trailing" id="2MV-Hx-1C8"/>
+                            <constraint firstItem="PBU-iw-XCy" firstAttribute="leading" secondItem="YyP-yi-jWW" secondAttribute="leading" id="9eh-TA-Jxb"/>
+                            <constraint firstItem="PBU-iw-XCy" firstAttribute="top" secondItem="YyP-yi-jWW" secondAttribute="top" id="ENZ-FV-5uc"/>
+                            <constraint firstItem="YyP-yi-jWW" firstAttribute="bottom" secondItem="PBU-iw-XCy" secondAttribute="bottom" id="ssM-jL-otk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YyP-yi-jWW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8n4-XL-udw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2810.144927536232" y="-174.45652173913044"/>
+        </scene>
+        <!--Main Tab View Controller-->
+        <scene sceneID="xbF-ei-qRc">
+            <objects>
+                <viewController id="3Lm-j1-a7Z" customClass="MainTabViewController" customModule="TinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rpK-mQ-GDr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-8d-95d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGX-fU-BDW">
+                                <rect key="frame" x="0.0" y="676" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="K8K-PG-S6S"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jA-jJ-gbj">
+                                <rect key="frame" x="0.0" y="677" width="414" height="59"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWM-c3-BYH">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="59"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button" image="ホームのフリーアイコン素材"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-ac-smM">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="59"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button" image="本棚のアイコン 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHh-DD-P5Z">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="59"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button" image="本棚のアイコン 2"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="IHh-DD-P5Z" firstAttribute="width" secondItem="KWM-c3-BYH" secondAttribute="width" id="atL-wy-VUG"/>
+                                    <constraint firstAttribute="height" constant="59" id="eZq-uW-Kzb"/>
+                                    <constraint firstItem="Gtg-ac-smM" firstAttribute="height" secondItem="KWM-c3-BYH" secondAttribute="height" id="ghy-ww-h3D"/>
+                                    <constraint firstItem="IHh-DD-P5Z" firstAttribute="height" secondItem="KWM-c3-BYH" secondAttribute="height" id="rAp-PA-MbU"/>
+                                    <constraint firstItem="Gtg-ac-smM" firstAttribute="width" secondItem="KWM-c3-BYH" secondAttribute="width" id="wTW-nP-keC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="0VG-x1-5UZ"/>
+                            <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="ggH-8d-95d" secondAttribute="trailing" id="85g-bb-9oh"/>
+                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="bottom" secondItem="VJA-MO-xXm" secondAttribute="bottom" priority="100" id="86T-yw-v3J"/>
+                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="top" secondItem="VGX-fU-BDW" secondAttribute="bottom" id="8tm-8j-VBd"/>
+                            <constraint firstItem="VJA-MO-xXm" firstAttribute="bottom" secondItem="ggH-8d-95d" secondAttribute="bottom" id="Agq-za-yjN"/>
+                            <constraint firstItem="4jA-jJ-gbj" firstAttribute="trailing" secondItem="VJA-MO-xXm" secondAttribute="trailing" id="M7N-L1-50u"/>
+                            <constraint firstItem="ggH-8d-95d" firstAttribute="top" secondItem="VJA-MO-xXm" secondAttribute="top" id="ReH-xo-FS8"/>
+                            <constraint firstItem="ggH-8d-95d" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="TI8-Ig-Xgs"/>
+                            <constraint firstItem="VGX-fU-BDW" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="o9l-jW-EqO"/>
+                            <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="VGX-fU-BDW" secondAttribute="trailing" id="tGD-n4-Uy3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VJA-MO-xXm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iqv-LM-3FF"/>
+                    <connections>
+                        <outlet property="channelButton" destination="IHh-DD-P5Z" id="19h-zw-Kn8"/>
+                        <outlet property="containerView" destination="ggH-8d-95d" id="pfh-Yt-J1h"/>
+                        <outlet property="footerStackView" destination="4jA-jJ-gbj" id="UWw-aW-CBf"/>
+                        <outlet property="historyButton" destination="Gtg-ac-smM" id="FUR-mv-ZB8"/>
+                        <outlet property="homeButton" destination="KWM-c3-BYH" id="5KZ-nE-5ge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iM5-I2-Fyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131.8840579710145" y="-182.60869565217394"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="vYd-os-nqh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="V5D-ph-x4u" customClass="NavigationViewController" customModule="TinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H5H-HZ-ISb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Lm-j1-a7Z" kind="relationship" relationship="rootViewController" id="nL6-nw-nHc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDH-dV-xAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.63768115942031" y="-182.60869565217394"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ホームのフリーアイコン素材" width="256" height="256"/>
+        <image name="本棚のアイコン 2" width="256" height="256"/>
+    </resources>
+</document>
