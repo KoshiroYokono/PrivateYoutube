@@ -12,14 +12,5 @@ class NavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
-    }
-    
-    func setUpNavigationBar() {
-        navigationBar.isTranslucent = false
-        let titleView = UIImageView(image: #imageLiteral(resourceName: "youtube"))
-        titleView.contentMode = .scaleAspectFit
-        navigationBar.topItem?.titleView = titleView
-        navigationBar.backgroundColor = .white
     }
 }

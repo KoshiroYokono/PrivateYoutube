@@ -102,6 +102,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bok-on-nnt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-9W-zWO">
+                                        <rect key="frame" x="10" y="0.0" width="110" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="sts-r4-3dC"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Sx1-9W-zWO" secondAttribute="bottom" id="Muf-RI-T80"/>
+                                    <constraint firstItem="Sx1-9W-zWO" firstAttribute="leading" secondItem="bok-on-nnt" secondAttribute="leading" constant="10" id="YqC-G9-NTx"/>
+                                    <constraint firstAttribute="height" constant="60" id="o8R-Ft-MiK"/>
+                                    <constraint firstItem="Sx1-9W-zWO" firstAttribute="top" secondItem="bok-on-nnt" secondAttribute="top" id="tTz-mF-Wuc"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-Ji-ubM">
                                 <rect key="frame" x="0.0" y="676" width="414" height="60"/>
                                 <subviews>
@@ -119,16 +137,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button" image="ホームのフリーアイコン素材"/>
+                                                <connections>
+                                                    <action selector="tabButtonDidTapped:" destination="3Lm-j1-a7Z" eventType="touchUpInside" id="u0h-lY-EXZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-ac-smM">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button" image="本棚のアイコン 2"/>
+                                                <connections>
+                                                    <action selector="tabButtonDidTapped:" destination="3Lm-j1-a7Z" eventType="touchUpInside" id="BfC-GO-0pn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHh-DD-P5Z">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="59"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button" image="本棚のアイコン 2"/>
+                                                <connections>
+                                                    <action selector="tabButtonDidTapped:" destination="3Lm-j1-a7Z" eventType="touchUpInside" id="HPH-X5-VIP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,10 +185,13 @@
                             <constraint firstItem="P9d-Ji-ubM" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="1pT-cC-dzn"/>
                             <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="ggH-8d-95d" secondAttribute="trailing" id="85g-bb-9oh"/>
                             <constraint firstItem="VJA-MO-xXm" firstAttribute="bottom" secondItem="ggH-8d-95d" secondAttribute="bottom" id="Agq-za-yjN"/>
+                            <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="bok-on-nnt" secondAttribute="trailing" id="Cid-BX-uyi"/>
                             <constraint firstItem="VJA-MO-xXm" firstAttribute="bottom" secondItem="P9d-Ji-ubM" secondAttribute="bottom" priority="100" id="Fz8-Me-PtM"/>
                             <constraint firstItem="ggH-8d-95d" firstAttribute="top" secondItem="VJA-MO-xXm" secondAttribute="top" id="ReH-xo-FS8"/>
                             <constraint firstItem="ggH-8d-95d" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="TI8-Ig-Xgs"/>
+                            <constraint firstItem="bok-on-nnt" firstAttribute="top" secondItem="VJA-MO-xXm" secondAttribute="top" id="idc-1C-Hii"/>
                             <constraint firstItem="VJA-MO-xXm" firstAttribute="trailing" secondItem="P9d-Ji-ubM" secondAttribute="trailing" id="qY5-dc-Ne3"/>
+                            <constraint firstItem="bok-on-nnt" firstAttribute="leading" secondItem="VJA-MO-xXm" secondAttribute="leading" id="yyL-kK-Dqc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VJA-MO-xXm"/>
                     </view>
@@ -172,6 +202,7 @@
                         <outlet property="footerView" destination="P9d-Ji-ubM" id="tM9-ud-Hhf"/>
                         <outlet property="historyButton" destination="Gtg-ac-smM" id="FUR-mv-ZB8"/>
                         <outlet property="homeButton" destination="KWM-c3-BYH" id="5KZ-nE-5ge"/>
+                        <outlet property="navigationViewTopConstraint" destination="idc-1C-Hii" id="t6U-SQ-W2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM5-I2-Fyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -197,6 +228,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="youtube" width="400" height="225"/>
         <image name="ホームのフリーアイコン素材" width="256" height="256"/>
         <image name="本棚のアイコン 2" width="256" height="256"/>
     </resources>

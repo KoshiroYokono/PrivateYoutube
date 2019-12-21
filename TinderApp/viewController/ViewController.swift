@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(false, animated: false)
         addData()
         movieListTableView.delegate = self
         movieListTableView.dataSource = self
@@ -42,7 +41,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if navigationBarIsHidden {
-            self.navigationController?.setNavigationBarHidden(true, animated: false)
+//            self.navigationController?.setNavigationBarHidden(true, animated: false)
+            
         }
     }
         
@@ -125,19 +125,17 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     func updateNavigationBarHiding(scrollDiff: CGFloat) {
         let boundaryValue: CGFloat = 20.0
-
+        let tabBarVC = parent as! MainTabViewController
         if scrollDiff > boundaryValue {
-            navigationController?.setNavigationBarHidden(false, animated: true)
-            navigationBarIsHidden = false
-//            let mainTabVC = parent as! MainTabViewController
-//            mainTabVC.view.bringSubviewToFront(mainTabVC.playerView)
-            return
+            tabBarVC.navigationViewTopConstraint.constant = 0
         }
         if scrollDiff < -boundaryValue {
-            navigationController?.setNavigationBarHidden(true, animated: true)
-            navigationBarIsHidden = true
-            return
+            tabBarVC.navigationViewTopConstraint.constant = -70
         }
+        UIView.animate(withDuration: 0.3) {
+            tabBarVC.view.layoutIfNeeded()
+        }
+        return
     }
 
     

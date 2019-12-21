@@ -14,6 +14,9 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var historyButton: UIButton!
     @IBOutlet weak var channelButton: UIButton!
     @IBOutlet weak var footerView: UIView!
+    
+    @IBOutlet weak var navigationViewTopConstraint: NSLayoutConstraint!
+    
     lazy var viewControllers:[UIViewController] = [
         UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateInitialViewController()!,
         UIStoryboard.init(name: "History", bundle: Bundle.main).instantiateInitialViewController()!,
@@ -121,6 +124,20 @@ class MainTabViewController: UIViewController {
         videoViewHeight = playerView.videoView.heightAnchor.constraint(equalToConstant: videoHeightOrigin)
         videoViewHeight.priority = UILayoutPriority(rawValue: 700)
         videoViewHeight.isActive = true
+    }
+    
+    
+    @IBAction func tabButtonDidTapped(_ sender: UIButton) {
+        switch sender {
+        case homeButton:
+            currentTabPage = 0
+        case historyButton:
+            currentTabPage = 1
+        case channelButton:
+            currentTabPage = 2
+        default:
+            break
+        }
     }
     
     func animatePlayView(toState: ViewState) {
