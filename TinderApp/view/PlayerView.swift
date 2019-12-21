@@ -27,6 +27,7 @@ class PlayerView: UIView {
     var state = stateOfVC.hidden
     var delegate: PlayerViewDelegate?
     var previousPosition: CGPoint!
+    var isPlayingVideo: Bool = false
     
     var viewState:ViewState = .up {
         didSet {
@@ -125,11 +126,22 @@ class PlayerView: UIView {
         if let videoId = video?.videoId {
             youtubeView.load(withVideoId: videoId, playerVars: ["playsinline": 1])
             youtubeView.playVideo()
+            isPlayingVideo = true
         }
         self.delegate?.didAppear()
     }
+    @IBAction func pauseButtonDidTapped(_ sender: Any) {
+        if isPlayingVideo {
+            youtubeView.pauseVideo()
+            isPlayingVideo = false
+        } else {
+            youtubeView.playVideo()
+            isPlayingVideo = true
+        }
+    }
     @IBAction func closePlayerViewButtonDidTapped(_ sender: Any) {
         youtubeView.stopVideo()
+        isPlayingVideo = false
         delegate?.closePlayerButton()
     }
 }

@@ -129,8 +129,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         if scrollDiff > boundaryValue {
             navigationController?.setNavigationBarHidden(false, animated: true)
             navigationBarIsHidden = false
-            let mainTabVC = parent as! MainTabViewController
-            mainTabVC.view.bringSubviewToFront(mainTabVC.playerView)
+//            let mainTabVC = parent as! MainTabViewController
+//            mainTabVC.view.bringSubviewToFront(mainTabVC.playerView)
             return
         }
         if scrollDiff < -boundaryValue {

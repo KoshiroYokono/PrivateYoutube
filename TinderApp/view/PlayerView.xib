@@ -44,6 +44,9 @@
                                 <constraint firstAttribute="width" secondItem="TLz-XL-PVl" secondAttribute="height" multiplier="1:1" id="tgn-Ky-x2X"/>
                             </constraints>
                             <state key="normal" title="再生"/>
+                            <connections>
+                                <action selector="pauseButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="7X5-v5-zFR"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
