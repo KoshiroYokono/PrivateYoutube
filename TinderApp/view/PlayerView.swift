@@ -67,6 +67,9 @@ class PlayerView: UIView {
         youtubeView = YTPlayerView(frame: videoView.frame)
         youtubeView.delegate = self
         videoView.addSubview(youtubeView)
+        youtubeView.topAnchor.constraint(equalTo: videoView.topAnchor).isActive = true
+        youtubeView.leadingAnchor.constraint(equalTo: videoView.leadingAnchor).isActive = true
+        youtubeView.trailingAnchor.constraint(greaterThanOrEqualTo: videoView.trailingAnchor).isActive = true
     }
     
     @IBAction func pangestureDidMoved(_ gesture: UIPanGestureRecognizer) {
@@ -123,11 +126,12 @@ class PlayerView: UIView {
         }
     }
     @objc func tapPlayView() {
-        if let videoId = video?.videoId {
-            youtubeView.load(withVideoId: videoId, playerVars: ["playsinline": 1])
+        if let video = video {
+            youtubeView.load(withVideoId: video.videoId, playerVars: ["playsinline": 1])
             youtubeView.playVideo()
             isPlayingVideo = true
         }
+        tableView.reloadData()
         self.delegate?.didAppear()
     }
     @IBAction func pauseButtonDidTapped(_ sender: Any) {
@@ -155,8 +159,13 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
 //        switch indexPath.row {
 //        case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HeaderCell.self), for: indexPath) as! HeaderCell
-            
-            
+        cell.delegate = self
+        if let video = video {
+            cell.titleLabel.text = video.title
+            cell.channelNameLabel.text = video.channelTitle
+            cell.goodButton.isSelected = VideoManager.shared.isVideoLiked(videoId: video.videoId)
+            cell.viewCountLabel.text = String(VideoManager.shared.viewCount(videoId: video.videoId))
+        }
             return cell
 //        }
     }
@@ -175,4 +184,17 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
 
 extension PlayerView: YTPlayerViewDelegate {
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) { playerView.playVideo() }
+}
+
+extension PlayerView: HeaderCellDelegate {
+    func goodButtonDidTapped(isLiked: Bool) {
+        if let videoId = video?.videoId {
+            if isLiked {
+                VideoManager.shared.addLike(videoId: videoId)
+            } else {
+                VideoManager.shared.removeLike(videoId: videoId)
+            }
+
+        }
+    }
 }

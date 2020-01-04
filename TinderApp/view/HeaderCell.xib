@@ -55,13 +55,16 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouj-Pg-Zy1">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouj-Pg-Zy1" customClass="ThumbUpButton" customModule="TinderApp" customModuleProvider="target">
                         <rect key="frame" x="45" y="66" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="iHk-3i-7rJ"/>
                             <constraint firstAttribute="width" secondItem="ouj-Pg-Zy1" secondAttribute="height" id="meZ-3p-Cx5"/>
                         </constraints>
                         <state key="normal" title="Button" image="thumbUp"/>
+                        <connections>
+                            <action selector="goodButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TuJ-cW-LL6"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -88,6 +91,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="channelNameLabel" destination="7v8-r1-4x8" id="pJF-Jq-isu"/>
+                <outlet property="goodButton" destination="ouj-Pg-Zy1" id="Hd1-JC-Njx"/>
                 <outlet property="titleLabel" destination="9Te-U8-zpe" id="hPb-xN-SWS"/>
                 <outlet property="viewCountLabel" destination="2LK-o5-oor" id="XC9-g4-ysB"/>
             </connections>

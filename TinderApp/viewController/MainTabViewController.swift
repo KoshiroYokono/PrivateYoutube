@@ -50,7 +50,8 @@ class MainTabViewController: UIViewController {
     
     var videoViewHeight: NSLayoutConstraint!
     var videoViewGraterHeight: NSLayoutConstraint!
-    
+    var videoViewWidth: NSLayoutConstraint!
+        
     let hiddenOrigin: CGPoint = {
         return CGPoint.init(x: 0, y: UIScreen.main.bounds.height)
     }()
@@ -118,6 +119,7 @@ class MainTabViewController: UIViewController {
         
         playerViewGraterHeight =  playerView.heightAnchor.constraint(greaterThanOrEqualToConstant: minimizedOrigin)
         videoViewGraterHeight =  playerView.videoView.heightAnchor.constraint(greaterThanOrEqualToConstant: 65)
+        
     }
     
     func setUpInnerView() {
@@ -128,6 +130,7 @@ class MainTabViewController: UIViewController {
     
     
     @IBAction func tabButtonDidTapped(_ sender: UIButton) {
+        changeButtonSelection(button: sender)
         switch sender {
         case homeButton:
             currentTabPage = 0
@@ -137,6 +140,20 @@ class MainTabViewController: UIViewController {
             currentTabPage = 2
         default:
             break
+        }
+    }
+    
+    private func changeButtonSelection(button: UIButton) {
+        let buttons:[UIButton] = [homeButton,historyButton,channelButton]
+        buttons.forEach { (btn) in
+            if btn == button {
+                btn.isSelected = true
+                btn.tintColor = UIColor.red
+//                btn.imageの変更
+            } else {
+                btn.isSelected = false
+                btn.tintColor = UIColor.gray
+            }
         }
     }
     

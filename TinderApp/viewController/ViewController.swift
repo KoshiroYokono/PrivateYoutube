@@ -141,9 +141,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        tabViewControllerを呼び出せるように変更が必要
         let mainTabVC = parent as! MainTabViewController
-        mainTabVC.playerView.video = videos[indexPath.row]
+        let video = videos[indexPath.row]
+        mainTabVC.playerView.video = video
+        VideoManager.shared.incrementViewCount(videoId: video.videoId)
         NotificationCenter.default.post(name: NSNotification.Name("open"), object: nil)
     }
     
