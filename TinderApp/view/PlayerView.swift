@@ -39,11 +39,15 @@ class PlayerView: UIView {
     @IBOutlet weak var panGesture: UIPanGestureRecognizer!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var underView: UIView!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
     var youtubeView: YTPlayerView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         NotificationCenter.default.addObserver(self, selector: #selector(tapPlayView), name: NSNotification.Name("open"), object: nil)
+        closeButton.resizeImage()
+        playButton.resizeImage()
         setUpTableView()
         setUpYoutubeView()
     }

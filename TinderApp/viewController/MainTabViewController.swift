@@ -50,7 +50,6 @@ class MainTabViewController: UIViewController {
     
     var videoViewHeight: NSLayoutConstraint!
     var videoViewGraterHeight: NSLayoutConstraint!
-    var videoViewWidth: NSLayoutConstraint!
         
     let hiddenOrigin: CGPoint = {
         return CGPoint.init(x: 0, y: UIScreen.main.bounds.height)
@@ -71,7 +70,7 @@ class MainTabViewController: UIViewController {
         currentTabPage = 0
         let buttons:[UIButton] = [homeButton,historyButton,channelButton]
         buttons.forEach { (button) in
-            resizeImage(button: button)
+            button.resizeImage()
         }
         setUpFooter()
         setUpPlayerView()
@@ -97,7 +96,7 @@ class MainTabViewController: UIViewController {
         let leading = view.leadingAnchor.constraint(equalTo: playerView.leadingAnchor, constant: -10)
         view.centerXAnchor.constraint(equalTo: playerView.centerXAnchor).isActive = true
         let topAnchor = view.topAnchor.constraint(greaterThanOrEqualTo: playerView.topAnchor, constant: 0)
-        playerViewWidth = playerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20)
+        playerViewWidth = playerView.widthAnchor.constraint(equalToConstant: 40)
         playerViewHeight = playerView.heightAnchor.constraint(equalToConstant: 0)
         playerViewBottomToFooter = playerView.bottomAnchor.constraint(equalTo: footerView.topAnchor, constant: -10)
         playerViewBottomToView = view.bottomAnchor.constraint(equalTo: playerView.underView.topAnchor)
@@ -119,7 +118,6 @@ class MainTabViewController: UIViewController {
         
         playerViewGraterHeight =  playerView.heightAnchor.constraint(greaterThanOrEqualToConstant: minimizedOrigin)
         videoViewGraterHeight =  playerView.videoView.heightAnchor.constraint(greaterThanOrEqualToConstant: 65)
-        
     }
     
     func setUpInnerView() {
@@ -201,13 +199,6 @@ class MainTabViewController: UIViewController {
             }
         }
     
-    private func resizeImage(button: UIButton) {
-        button.imageView?.contentMode = .scaleAspectFit
-        button.contentHorizontalAlignment = .fill
-        button.contentVerticalAlignment = .fill
-        button.imageEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 15, right: 10)
-    }
-    
     override var prefersStatusBarHidden: Bool {
         return isStatusBarHidden
     }
@@ -240,6 +231,7 @@ extension MainTabViewController: PlayerViewDelegate {
             playerView.underView.isHidden = true
         } else {
             playerView.underView.isHidden = false
+            
         }
     }
     

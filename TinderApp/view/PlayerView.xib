@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,41 +17,6 @@
                     <rect key="frame" x="0.0" y="233" width="414" height="663"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-7i-EYY">
-                    <rect key="frame" x="0.0" y="831" width="414" height="65"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7m-08-lPk">
-                            <rect key="frame" x="349" y="0.0" width="65" height="65"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="u7m-08-lPk" secondAttribute="height" id="waD-Ry-GPh"/>
-                            </constraints>
-                            <state key="normal" title="閉じる"/>
-                            <connections>
-                                <action selector="closePlayerViewButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hcT-1m-jJ9"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-XL-PVl">
-                            <rect key="frame" x="284" y="0.0" width="65" height="65"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="TLz-XL-PVl" secondAttribute="height" multiplier="1:1" id="tgn-Ky-x2X"/>
-                            </constraints>
-                            <state key="normal" title="再生"/>
-                            <connections>
-                                <action selector="pauseButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="7X5-v5-zFR"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstItem="u7m-08-lPk" firstAttribute="leading" secondItem="TLz-XL-PVl" secondAttribute="trailing" id="4v2-8c-tBi"/>
-                        <constraint firstAttribute="trailing" secondItem="u7m-08-lPk" secondAttribute="trailing" id="7nG-tq-KFb"/>
-                        <constraint firstItem="TLz-XL-PVl" firstAttribute="top" secondItem="Ad2-7i-EYY" secondAttribute="top" id="ECr-Bl-MzJ"/>
-                        <constraint firstAttribute="bottom" secondItem="u7m-08-lPk" secondAttribute="bottom" id="JdP-1I-W2m"/>
-                        <constraint firstItem="u7m-08-lPk" firstAttribute="top" secondItem="Ad2-7i-EYY" secondAttribute="top" id="MKT-tm-FFk"/>
-                        <constraint firstAttribute="height" priority="700" constant="65" id="rDZ-15-Iqg"/>
-                        <constraint firstAttribute="bottom" secondItem="TLz-XL-PVl" secondAttribute="bottom" id="xYF-Dd-qH4"/>
-                    </constraints>
-                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nm-KB-fSA">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,8 +24,47 @@
                         <constraint firstAttribute="width" secondItem="9nm-KB-fSA" secondAttribute="height" multiplier="16:9" priority="300" id="ij4-hy-KOV"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-7i-EYY">
+                    <rect key="frame" x="0.0" y="831" width="414" height="65"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7m-08-lPk">
+                            <rect key="frame" x="349" y="0.0" width="65" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="u7m-08-lPk" secondAttribute="height" id="waD-Ry-GPh"/>
+                            </constraints>
+                            <state key="normal" image="close_button"/>
+                            <connections>
+                                <action selector="closePlayerViewButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hcT-1m-jJ9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-XL-PVl">
+                            <rect key="frame" x="284" y="0.0" width="65" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65" id="3UP-JE-OwY"/>
+                                <constraint firstAttribute="width" secondItem="TLz-XL-PVl" secondAttribute="height" multiplier="1:1" id="tgn-Ky-x2X"/>
+                                <constraint firstAttribute="width" constant="65" id="uMQ-8Z-ckN"/>
+                            </constraints>
+                            <state key="normal" image="play_button"/>
+                            <connections>
+                                <action selector="pauseButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="7X5-v5-zFR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.35139744718309857" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="u7m-08-lPk" firstAttribute="leading" secondItem="TLz-XL-PVl" secondAttribute="trailing" id="4v2-8c-tBi"/>
+                        <constraint firstAttribute="trailing" secondItem="u7m-08-lPk" secondAttribute="trailing" id="7nG-tq-KFb"/>
+                        <constraint firstItem="TLz-XL-PVl" firstAttribute="top" secondItem="Ad2-7i-EYY" secondAttribute="top" id="ECr-Bl-MzJ"/>
+                        <constraint firstItem="u7m-08-lPk" firstAttribute="height" secondItem="TLz-XL-PVl" secondAttribute="height" id="IpZ-5p-va1"/>
+                        <constraint firstAttribute="bottom" secondItem="u7m-08-lPk" secondAttribute="bottom" id="JdP-1I-W2m"/>
+                        <constraint firstItem="u7m-08-lPk" firstAttribute="top" secondItem="Ad2-7i-EYY" secondAttribute="top" id="MKT-tm-FFk"/>
+                        <constraint firstItem="u7m-08-lPk" firstAttribute="width" secondItem="TLz-XL-PVl" secondAttribute="width" id="eNV-AL-TEi"/>
+                        <constraint firstAttribute="height" priority="700" constant="65" id="rDZ-15-Iqg"/>
+                        <constraint firstAttribute="bottom" secondItem="TLz-XL-PVl" secondAttribute="bottom" id="xYF-Dd-qH4"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="pNN-Oz-Fra" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="18a-nI-aBt"/>
@@ -78,7 +81,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="closeButton" destination="u7m-08-lPk" id="lvz-XE-cxQ"/>
                 <outlet property="panGesture" destination="rle-Nh-1L3" id="wlO-uv-OE8"/>
+                <outlet property="playButton" destination="TLz-XL-PVl" id="90d-C3-SQ4"/>
                 <outlet property="tableView" destination="pNN-Oz-Fra" id="xdF-M3-XKm"/>
                 <outlet property="underView" destination="Ad2-7i-EYY" id="jOx-hR-Jci"/>
                 <outlet property="videoView" destination="9nm-KB-fSA" id="s6y-mn-jZW"/>
@@ -92,4 +97,8 @@
             </connections>
         </panGestureRecognizer>
     </objects>
+    <resources>
+        <image name="close_button" width="567" height="567"/>
+        <image name="play_button" width="512" height="512"/>
+    </resources>
 </document>

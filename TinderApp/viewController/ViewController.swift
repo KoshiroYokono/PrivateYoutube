@@ -142,9 +142,11 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let mainTabVC = parent as! MainTabViewController
-        let video = videos[indexPath.row]
-        mainTabVC.playerView.video = video
-        VideoManager.shared.incrementViewCount(videoId: video.videoId)
+        if !videos.isEmpty {
+            let video = videos[indexPath.row]
+            mainTabVC.playerView.video = video
+            VideoManager.shared.incrementViewCount(videoId: video.videoId)
+        }
         NotificationCenter.default.post(name: NSNotification.Name("open"), object: nil)
     }
     

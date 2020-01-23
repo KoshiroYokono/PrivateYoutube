@@ -13,12 +13,24 @@ import SwiftyJSON
 fileprivate let hostURL = "https://www.googleapis.com/youtube/v3"
 fileprivate let apiKey = "AIzaSyAXuv29FfuDTnr75zQPC5TJJgGASscrchA"
 
-enum Api: String {
-    case search = "/search?"
-    case sample = "/search?part=snippet&channelId=UCpRTROg3nHnOWVPVeMq4z_w&order=date&maxResults=15"
+enum Api {
+    case search
+    case sample
+    case channel(String)
+    
+    var urlValue: String {
+        switch self {
+        case .search:
+            return "/search?"
+        case .sample:
+            return "/search?part=snippet&channelId=UCpRTROg3nHnOWVPVeMq4z_w&order=date&maxResults=15"
+        case .channel(let id):
+             return "/channels?part=snippet&id=\(id)&fields=items(id,snippet(thumbnails))"
+        }
+    }
     
     var url: String {
-        return (hostURL + rawValue + "&key=\(apiKey)").urlEncode()
+        return (hostURL + urlValue + "&key=\(apiKey)").urlEncode()
     }
 }
 

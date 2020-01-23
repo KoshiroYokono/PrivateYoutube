@@ -10,6 +10,7 @@
 		21238F1D23C08FEC009673BE /* UserDefault+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21238F1C23C08FEC009673BE /* UserDefault+extension.swift */; };
 		21238F1F23C09476009673BE /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21238F1E23C09476009673BE /* VideoManager.swift */; };
 		21238F2123C0BD5C009673BE /* ThumbUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21238F2023C0BD5C009673BE /* ThumbUpButton.swift */; };
+		2152051D23DA0EB800D4DED9 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152051C23DA0EB800D4DED9 /* UIButton+extension.swift */; };
 		215C0CBB23ACA1B200559066 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215C0CBA23ACA1B200559066 /* MainTabViewController.swift */; };
 		215C0CBE23ACA68E00559066 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215C0CBD23ACA68E00559066 /* Home.storyboard */; };
 		215C0CC023ACA73500559066 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215C0CBF23ACA73500559066 /* History.storyboard */; };
@@ -71,6 +72,7 @@
 		21238F1C23C08FEC009673BE /* UserDefault+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+extension.swift"; sourceTree = "<group>"; };
 		21238F1E23C09476009673BE /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		21238F2023C0BD5C009673BE /* ThumbUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbUpButton.swift; sourceTree = "<group>"; };
+		2152051C23DA0EB800D4DED9 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		215C0CBA23ACA1B200559066 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		215C0CBD23ACA68E00559066 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		215C0CBF23ACA73500559066 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				21E0E8182384193000FD6B41 /* UIImage+extension.swift */,
 				21E0E8282387A80C00FD6B41 /* Date+extension.swift */,
 				21238F1C23C08FEC009673BE /* UserDefault+extension.swift */,
+				2152051C23DA0EB800D4DED9 /* UIButton+extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				21238F1F23C09476009673BE /* VideoManager.swift in Sources */,
 				21FAB353237F0B3800C4F84B /* ApiDefinition.swift in Sources */,
 				215C0CBB23ACA1B200559066 /* MainTabViewController.swift in Sources */,
+				2152051D23DA0EB800D4DED9 /* UIButton+extension.swift in Sources */,
 				218402022375008300DF3B5F /* ViewController.swift in Sources */,
 				21E0E8192384193000FD6B41 /* UIImage+extension.swift in Sources */,
 				218402002375008300DF3B5F /* AppDelegate.swift in Sources */,
@@ -691,7 +695,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -746,7 +750,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
